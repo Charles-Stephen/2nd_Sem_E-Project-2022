@@ -17,27 +17,51 @@ namespace Printing_Photo_Online.Controllers
         // GET: categories
         public ActionResult Index()
         {
-            return View(db.categories.ToList());
+            if (Session["name"] != null)
+            {
+                return View(db.categories.ToList());
+            }
+            else if (Session["name"] == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+            return View();
         }
 
         // GET: categories/Details/5
         public ActionResult Details(int? id)
         {
-            if (id == null)
+            if (Session["name"] != null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                category category = db.categories.Find(id);
+                if (category == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(category);
             }
-            category category = db.categories.Find(id);
-            if (category == null)
+            else if (Session["name"] == null)
             {
-                return HttpNotFound();
-            }
-            return View(category);
+                return RedirectToAction("Login", "Account");
+            }            
+            return View();
         }
 
         // GET: categories/Create
         public ActionResult Create()
         {
+            if (Session["name"] != null)
+            {
+                return View();
+            }
+            else if (Session["name"] == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             return View();
         }
 
@@ -61,16 +85,25 @@ namespace Printing_Photo_Online.Controllers
         // GET: categories/Edit/5
         public ActionResult Edit(int? id)
         {
-            if (id == null)
+            if (Session["name"] != null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                category category = db.categories.Find(id);
+                if (category == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(category);
             }
-            category category = db.categories.Find(id);
-            if (category == null)
+            else if (Session["name"] == null)
             {
-                return HttpNotFound();
+                return RedirectToAction("Login", "Account");
             }
-            return View(category);
+
+            return View();
         }
 
         // POST: categories/Edit/5
@@ -92,16 +125,25 @@ namespace Printing_Photo_Online.Controllers
         // GET: categories/Delete/5
         public ActionResult Delete(int? id)
         {
-            if (id == null)
+            if (Session["name"] != null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                category category = db.categories.Find(id);
+                if (category == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(category);
             }
-            category category = db.categories.Find(id);
-            if (category == null)
+            else if (Session["name"] == null)
             {
-                return HttpNotFound();
+                return RedirectToAction("Login", "Account");
             }
-            return View(category);
+
+            return View();
         }
 
         // POST: categories/Delete/5

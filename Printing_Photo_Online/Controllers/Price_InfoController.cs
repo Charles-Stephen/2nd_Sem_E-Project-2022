@@ -17,27 +17,55 @@ namespace Printing_Photo_Online.Controllers
         // GET: Price_Info
         public ActionResult Index()
         {
-            return View(db.Price_Info.ToList());
+            if (Session["name"] != null)
+            {
+                return View(db.Price_Info.ToList());
+            }
+            else if (Session["name"] == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            return View();
         }
 
         // GET: Price_Info/Details/5
         public ActionResult Details(int? id)
         {
-            if (id == null)
+
+            if (Session["name"] != null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Price_Info price_Info = db.Price_Info.Find(id);
+                if (price_Info == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(price_Info);
             }
-            Price_Info price_Info = db.Price_Info.Find(id);
-            if (price_Info == null)
+            else if (Session["name"] == null)
             {
-                return HttpNotFound();
+                return RedirectToAction("Login", "Account");
             }
-            return View(price_Info);
+
+            return View();
         }
 
         // GET: Price_Info/Create
         public ActionResult Create()
         {
+
+            if (Session["name"] != null)
+            {
+                return View();
+            }
+            else if (Session["name"] == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             return View();
         }
 
@@ -61,16 +89,25 @@ namespace Printing_Photo_Online.Controllers
         // GET: Price_Info/Edit/5
         public ActionResult Edit(int? id)
         {
-            if (id == null)
+            if (Session["name"] != null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Price_Info price_Info = db.Price_Info.Find(id);
+                if (price_Info == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(price_Info);
             }
-            Price_Info price_Info = db.Price_Info.Find(id);
-            if (price_Info == null)
+            else if (Session["name"] == null)
             {
-                return HttpNotFound();
+                return RedirectToAction("Login", "Account");
             }
-            return View(price_Info);
+
+            return View();
         }
 
         // POST: Price_Info/Edit/5
@@ -92,16 +129,25 @@ namespace Printing_Photo_Online.Controllers
         // GET: Price_Info/Delete/5
         public ActionResult Delete(int? id)
         {
-            if (id == null)
+            if (Session["name"] != null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Price_Info price_Info = db.Price_Info.Find(id);
+                if (price_Info == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(price_Info);
             }
-            Price_Info price_Info = db.Price_Info.Find(id);
-            if (price_Info == null)
+            else if (Session["name"] == null)
             {
-                return HttpNotFound();
+                return RedirectToAction("Login", "Account");
             }
-            return View(price_Info);
+
+            return View();
         }
 
         // POST: Price_Info/Delete/5
