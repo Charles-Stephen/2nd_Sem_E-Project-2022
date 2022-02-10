@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/Frontend_Layout.cshtml";
+}
+
+
+<section id="home">
+    <div class="container">
+        <div class="container">
+
+            <h2 class="text-center mt-5">REGISTER</h2>
+
+            <form method="post" class="container mt-5" action="~/Home/Register" enctype="multipart/form-data">
+                <div align="center" class="form-group mb-3 w-100">
+                    <img id="output" class="rounded-circle" style="width: 20vw; height: 20vw; border: solid black 1px;" />
+
+                    <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;"></p>
+                    <p><label for="file" class="rounded-pill btn btn-outline-dark" style="cursor: pointer;">Upload Image</label></p>
+
+                    <!-- Scripting for Image -->
+                    <script>
+                        var loadFile = function (event) {
+                            var image = document.getElementById('output');
+                            image.src = URL.createObjectURL(event.target.files[0]);
+                        };
+                    </script>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label>First Name</label>
+                    <input type="text" name="firstname" class="form-control" placeholder="Enter First Name" required />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label>Last Name</label>
+                    <input type="text" name="lastname" class="form-control" placeholder="Enter Last Name" required />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label>Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Enter Email Address" required />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label>Password</label>
+                    <input type="password" name="pass" class="form-control" placeholder="Enter Password" required />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label>Date Of Birth</label>
+                    <input type="text" name="birth" class="form-control" placeholder="Enter Your Date Of Birth" required />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label>Gender</label>
+                    <div class="input-group justify-content-around">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="gender1" value="Male">
+                            <label class="form-check-label" for="gender1">
+                                Male
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="gender2" value="Female">
+                            <label class="form-check-label" for="gender2">
+                                Female
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="gender3" value="Other">
+                            <label class="form-check-label" for="gender3">
+                                Other
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label>Phone</label>
+                    <input type="tel" name="phone" class="form-control" placeholder="Enter Phone Number" required />
+                </div>
+
+                <div class="form-group mb-3">
+                    <input type="submit" name="submit" class="btn btn-outline-dark" placeholder="Submit" />
+                    <p class="text-danger">@ViewBag.error</p>
+                    <small>Do not have an Account? <a class="text-primary" href="@Url.Action("Login", "Account")"> SIGN IN</a></small>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

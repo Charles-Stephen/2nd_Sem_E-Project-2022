@@ -1,0 +1,140 @@
+﻿<!doctype html>
+<html class="no-js" lang="">
+
+
+<!-- Mirrored from webangon.com/html/cekko/index-white.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Feb 2022 05:20:43 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> MyImage - Online Order For Digital Printing </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="manifest" href="~/frontend/site.html">
+
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAA6BcAAMgTAAD9vwAAxaMAAIQhAAD+fwAAgkEAAAJAAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon" />
+    <!-- Place favicon.ico in the root directory -->
+
+
+    <link rel="stylesheet" href="~/frontend/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/frontend/css/flaticon.css">
+    <link rel="stylesheet" href="~/frontend/css/themify-icons.css">
+    <link rel="stylesheet" href="~/frontend/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/frontend/css/animate.min.css">
+    <link rel="stylesheet" href="~/frontend/css/line-awesome.css">
+    <link rel="stylesheet" href="~/frontend/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/frontend/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="~/frontend/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/frontend/css/slicknav.css">
+    <link rel="stylesheet" href="~/frontend/css/swiper.min.css">
+    <link rel="stylesheet" href="~/frontend/css/normalize.css">
+    <link rel="stylesheet" href="~/frontend/css/style.css">
+    <link rel="stylesheet" href="~/frontend/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,500i,600,700,800&amp;display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <div class="mouse-cursor cursor-outer" style="visibility: visible; transform: translate(529px, 654px);"></div>
+    <div class="mouse-cursor cursor-inner" style="visibility: visible; transform: translate(529px, 654px);"></div>
+    <!-- START PRELOADER -->
+    <section class="loading-container">
+        <div class="Shape_7">
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+    <!-- END PRELOADER -->
+    <!-- START HEADER -->
+    <header>
+        <div id="header_sticky_2" class="mainmenu_area_2">
+            <div class="logo-area">
+                <a href="~/Home/Index"><img src="~/Content/myicon-removebg-preview (3).png" alt="porri"></a>
+            </div>
+
+
+            <button aria-label='Toggle menu' class='nav-button button-lines button-lines-x close' role='button' type='button'>
+
+                @if (ViewBag.reg == null)
+                {
+                    <span class='lines'></span>
+                }
+                else
+                {
+                    <span style="visibility:hidden" class='lines'></span>
+                }
+            </button>
+            </div>
+    </header>
+
+    @if (ViewBag.reg  != null) 
+    {
+        <nav class="nav-wrapper mainmenu">
+            <ul class="nav">
+                <li class="scroll-to"><a href="#home" class="scroll-click">Home</a></li>
+                <li class="scroll-to"><a href="#about" class="scroll-click">About</a></li>
+                <li class="scroll-to"><a href="#service" class="scroll-click">Services</a></li>
+                <li class="scroll-to"><a href="#portfolio" class="scroll-click">portfolio</a></li>
+                <li class="scroll-to"><a href="#team" class="scroll-click">team</a></li>
+                <li class="scroll-to"><a href="#blog" class="scroll-click">blog</a></li>
+            </ul>
+        </nav>
+    }
+    
+    <!-- END HEADER -->
+
+    @RenderBody()
+
+    <!-- START FOOTER -->
+    <div class="section-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footer-info-wrapper">
+                        <div class="copyright">
+                            <p>Copyright ©2020 by <a href="https://themeforest.net/user/themexhunter">ThemexHunter.</a> All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div class="footer-icon">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END FOOTER -->
+
+    <script src="~/frontend/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="~/frontend/js/vendor/jquery-3.5.1.min.js"></script>
+    <script src="~/frontend/js/jquery.counterup.min.js"></script>
+    <script src="~/frontend/js/jquery.scrollUp.min.js"></script>
+    <script src="~/frontend/js/scrollreveal.min.js"></script>
+    <script src="~/frontend/js/waypoints.min.js"></script>
+    <script src="~/frontend/js/bootstrap.min.js"></script>
+    <script src="~/frontend/js/jquery.sticky-sidebar.min.js"></script>
+    <script src="~/frontend/js/jquery.slicknav.min.js"></script>
+    <script src="~/frontend/js/smooth-scrollbar.js"></script>
+    <script src="~/frontend/js/fancyBox%20v2.1.5.js"></script>
+    <script src="~/frontend/js/swiper.min.js"></script>
+    <script src="~/frontend/js/owl.carousel.min.js"></script>
+    <script src="~/frontend/js/main.js"></script>
+    <script src="~/frontend/js/isotope.pkgd.min.js"></script>
+    <script src="~/frontend/js/imagesloaded.pkgd.min.js"></script>
+    <script src="~/frontend/js/plugins.js"></script>
+
+</body>
+
+
+<!-- Mirrored from webangon.com/html/cekko/index-white.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Feb 2022 05:24:20 GMT -->
+</html>

@@ -1,0 +1,234 @@
+/* Normal desktop :992px. LG Device */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+#header_sticky_2.scroll_header_2 .logo-area {
+    left: 25px;
+    top: 4px;
+}
+#header_sticky_2.scroll_header_2 button.close {
+    padding: 20px 50px;
+}
+.demo-content {
+    padding-left: 42px;
+}
+.demo-content {
+    transform: translateY(50%);
+}
+.logo-area {
+    left: 85px;
+}
+.about-detail {
+    margin-top: 58px;
+}
+figure.snip1208 img {
+    width: 320px;
+}
+figure.snip1208 p {
+    display: none;
+}
+
+
+#header_sticky_2.demo-black.scroll_header_2 {
+    background: #000 none repeat scroll 0 0;
+    box-shadow: 0px 10px 16px 4px rgb(99 99 99 / 20%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+/* small mobile layout :320px. */
+@media only screen and (max-width: 767px) {
+.lines:after, .lines:before {
+	background: #000;
+}
+.lines {
+	background: #000;
+}
+.nav-wrapper {
+    right: 50px;
+    top: 100px;
+}
+.banner-images {
+    display: none;
+}
+.demo-content {
+	padding-left: 15px;
+    padding-right:15px;
+	transform: translateY(65%);
+}
+.logo-area {
+    left: 64px;
+}
+#header_sticky_2.scroll_header_2 .logo-area {
+    left: 0px;
+    top: 7px;
+}
+#header_sticky_2.scroll_header_2 button.close {
+    padding: 20px 20px;
+}
+.demo-content h1 {
+    font-size: 34px;
+}	
+.section-tittle h2 {
+    font-size: 34px;
+}	
+.mt-5, .my-5 {
+    margin-top: 0rem!important;
+}	
+	
+	
+.about-detail {
+    position: relative; 
+    background: #fff;
+    padding: 0px;
+	margin-top: 80px;
+    margin-left: 0px;
+    z-index: 1;
+}	
+.about-detail h3 {
+    font-size: 34px;
+}	
+.cta-section .cta-detail h2 {
+    font-size: 34px;
+}	
+.team-text {
+    left: 6%;
+    top: 32%;
+    margin: 22px;
+    padding: 40px;
+}	
+figure.snip1208 img {
+    width: 510px;
+    float: none; 
+}
+.ask-middle{
+	margin-top:40px;
+}
+.footer-icon {
+    text-align: center;
+}
+.copyright > p {
+    text-align: center;
+}	
+
+
+	
+#header_sticky_2.demo-black.scroll_header_2 {
+    background: #000 none repeat scroll 0 0;
+    box-shadow: 0px 10px 16px 4px rgb(99 99 99 / 20%);
+}
+.demo-black .lines:after, .demo-black .lines:before {
+	background: #fff;
+}
+.demo-black .lines {
+	background: #fff;
+}
+
+.demo-black .about-detail {
+    background: transparent;
+}
+	.demo-preview .banner_inner h1 {
+    font-size: 34px;
+}
+	
+}
+
+/* Large Mobile layout:550px. */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+.lines:after, .lines:before {
+	background: #000;
+}
+.lines {
+	background: #000;
+}
+.banner-images {
+    display: none;
+}
+.demo-content {
+	padding-left: 85px;
+    padding-right:85px;
+	transform: translateY(60%);
+}
+.logo-area {
+    left: 85px;
+}
+#header_sticky_2.scroll_header_2 .logo-area {
+	left: 32px;
+    top: 7px;
+}
+#header_sticky_2.scroll_header_2 button.close {
+    padding: 20px 50px;
+}
+.about-detail {
+    position: relative; 
+    background: #fff;
+    padding: 0px;
+	margin-top: 80px;
+    margin-left: 0px;
+    z-index: 1;
+}
+.team-text {
+    left: 6%;
+    top: 45%;
+    margin: 16px;
+    padding: 40px;
+}
+.review-area .section-tittle {
+    padding-left: 0px;
+	padding-top:30px;
+}
+.review-area .section-tittle {
+    padding-bottom: 0px;
+}
+figure.snip1208 img {
+    width: 510px;
+    float: none; 
+}
+.mt-5, .my-5 {
+    margin-top: 0rem!important;
+}
+.ask-middle{
+	margin-top:40px;
+}
+.footer-icon {
+    text-align: center;
+}
+.copyright > p {
+    text-align: center;
+}
+
+
+
+
+#header_sticky_2.demo-black.scroll_header_2 {
+    background: #000 none repeat scroll 0 0;
+    box-shadow: 0px 10px 16px 4px rgb(99 99 99 / 20%);
+}
+.demo-black .lines:after, .demo-black .lines:before {
+	background: #fff;
+}
+.demo-black .lines {
+	background: #fff;
+}
+.demo-black .about-detail {
+    background: transparent;
+}
+
+.demo-preview .banner_inner h1 {
+    font-size: 34px;
+}
+  
+}
+
