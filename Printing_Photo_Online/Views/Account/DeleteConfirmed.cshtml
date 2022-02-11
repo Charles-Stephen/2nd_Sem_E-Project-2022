@@ -1,0 +1,125 @@
+﻿@model Printing_Photo_Online.user
+
+@{
+    ViewBag.Title = "DeleteConfirmed";
+    Layout = "~/Views/Shared/Frontend_Layout.cshtml";
+}
+
+<section id="home">
+    <div class="container">
+        <div class="container">
+            <h2>Delete Confirmed</h2>
+
+            <div>
+                <h4>user</h4>
+                <hr />
+                <dl class="dl-horizontal hidden">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.First_Name)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.First_Name)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Last_Name)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Last_Name)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Email)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Pass)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Pass)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.User_Type)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.User_Type)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.User_Profile)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.User_Profile)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Date_Of_Birth)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Date_Of_Birth)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Gender)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Gender)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Phone)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Phone)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Order_id)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Order_id)
+                    </dd>
+
+                </dl>
+
+                <h1 class="text-center container">Do You Want To Delete This Account?</h1>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Delete" class="btn btn-default" />
+
+                        @if (@ViewBag.yourtype <= 0)
+                        {
+                            <a href="~/Account/Index">
+                                <input type="button" value="Cancel" class="btn btn-outline-dark" />
+                            </a>
+                        }
+                        else if (@ViewBag.yourtype >= 1)
+                        {
+                            <a href="~/Home/Index">
+                                <input type="button" value="Cancel" class="btn btn-outline-dark" />
+                            </a>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

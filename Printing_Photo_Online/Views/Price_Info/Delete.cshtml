@@ -5,45 +5,54 @@
     Layout = "~/Views/Shared/Backend_Layout.cshtml";
 }
 
-<h2>Delete</h2>
+<div id="layoutSidenav_content">
+    <main>
+        <div class="container-fluid px-4">
+            <h2 class="mt-4">Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Price_Info</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Size)
-        </dt>
+            <h4>Are you sure you want to delete this?</h4>
+            <div>
+                <h4 class="ms-4 mt-2">Price Info</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        Size
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Size)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.Size)
+                    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
+                    <dt>
+                        Price
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.Price)
+                    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Sale_Price)
-        </dt>
+                    <dt>
+                        Sale Price
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Sale_Price)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.Sale_Price)
+                    </dd>
 
-    </dl>
+                </dl>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Delete" class="btn btn-outline-dark" />
+
+                        <a href="~/Price_Info/Index">
+                            <input type="button" value="Cancel" class="btn btn-outline-dark" />
+                        </a>
+                    </div>
+                }
+            </div>
         </div>
-    }
-</div>
+    </main>
