@@ -1,0 +1,18 @@
+﻿@model Printing_Photo_Online.user
+
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/Frontend_Layout.cshtml";
+}
+
+
+
+<section id="home">
+    <h2 class="mt-5">Profile</h2>
+
+    <div align="center" class="w-100 container">
+        <img id="output" class="rounded-circle" src=" style="width: 20vw; height: 20vw; border: solid black 1px;" />
+    </div>
+
+    <h1 class="text-center">@Session["name"]</h1>
+</section>

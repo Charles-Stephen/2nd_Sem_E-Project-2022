@@ -11,92 +11,100 @@
             <h2>Delete Confirmed</h2>
 
             <div>
-                <h4>user</h4>
+                <h4>user Profile</h4>
                 <hr />
-                <dl class="dl-horizontal hidden">
-                    <dt>
-                        @Html.DisplayNameFor(model => model.First_Name)
-                    </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.First_Name)
-                    </dd>
+                @if (@ViewBag.yourtype <= 0)
+                {
 
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Last_Name)
-                    </dt>
+                    <dl class="dl-horizontal hidden">
+                        <dt>
+                            First Name
+                        </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Last_Name)
-                    </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.First_Name)
+                        </dd>
 
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Email)
-                    </dt>
+                        <dt>
+                            Last Name
+                        </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Email)
-                    </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Last_Name)
+                        </dd>
 
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Pass)
-                    </dt>
+                        <dt>
+                            Email
+                        </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Pass)
-                    </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Email)
+                        </dd>
 
-                    <dt>
-                        @Html.DisplayNameFor(model => model.User_Type)
-                    </dt>
+                        <dt>
+                            Password
+                        </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.User_Type)
-                    </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Pass)
+                        </dd>
 
-                    <dt>
-                        @Html.DisplayNameFor(model => model.User_Profile)
-                    </dt>
+                        <dt>
+                            User Type
+                        </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.User_Profile)
-                    </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.User_Type)
+                        </dd>
 
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Date_Of_Birth)
-                    </dt>
+                        <dt>
+                            User Profile
+                        </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Date_Of_Birth)
-                    </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.User_Profile)
+                        </dd>
 
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Gender)
-                    </dt>
+                        <dt>
+                            Date Of Birth
+                        </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Gender)
-                    </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Date_Of_Birth)
+                        </dd>
 
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Phone)
-                    </dt>
+                        <dt>
+                            Gender
+                        </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Phone)
-                    </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Gender)
+                        </dd>
 
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Order_id)
-                    </dt>
+                        <dt>
+                            Phone
+                        </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Order_id)
-                    </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Phone)
+                        </dd>
 
-                </dl>
+                        <dt>
+                            Order Number
+                        </dt>
 
-                <h1 class="text-center container">Do You Want To Delete This Account?</h1>
+                        <dd>
+                            @Html.DisplayFor(model => model.Order_id)
+                        </dd>
+
+                    </dl>
+                }
+                else if (@ViewBag.yourtype >= 1)
+                {
+                    <h1 class="text-center container">Do You Want To Delete This Account?</h1>
+                }
+
 
                 @using (Html.BeginForm())
                 {

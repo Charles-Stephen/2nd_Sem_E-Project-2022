@@ -86,5 +86,28 @@ namespace Printing_Photo_Online.Controllers
             }
             return View();
         }
+
+
+
+
+        //==============================================================
+        //              REGISTER
+        //==============================================================
+
+        public ActionResult Profile()
+        {
+            if (Session["name"] != null)
+            {
+                var data = db.users.ToList();
+                return View(data);
+            }
+            else if (Session["name"] == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            return View();
+
+        }
     }
 }

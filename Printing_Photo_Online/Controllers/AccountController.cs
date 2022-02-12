@@ -75,6 +75,28 @@ namespace Printing_Photo_Online.Controllers
 
 
         //==============================================================
+        //              Accounts
+        //==============================================================
+
+        public ActionResult Account()
+        {
+            if (Session["name"] != null)
+            {
+                return View(db.users.ToList());
+            }
+            else if (Session["name"] == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            return View();
+
+        }
+
+
+
+
+        //==============================================================
         //              EDIT
         //==============================================================
 

@@ -501,6 +501,8 @@
     <Content Include="Views\Price_Info\Index.cshtml" />
     <Content Include="Views\Account\Edit.cshtml" />
     <Content Include="Views\Account\DeleteConfirmed.cshtml" />
+    <Content Include="Views\Account\Account.cshtml" />
+    <Content Include="Views\Home\Profile.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,42 @@
+create table category (
+	id int primary key identity,
+	Category_Name varchar(255)
+)
+
+create table orders (
+	id int primary key identity,
+	UserId int,
+	Order_Number int,
+	Photograph_Id int,
+	PriceInfo_Id int,
+	Quantity int,
+	Total_Price int
+)
+
+create table Photograph (
+	id int primary key identity,
+	UserId int,
+	Photo varchar(255),
+	category_id int
+)
+
+create table Price_Info (
+	id int primary key identity,
+	Size varchar(255),
+	Price int,
+	Sale_Price int
+)
+
+create table users (
+	id int primary key identity,
+	First_Name varchar(255),
+	Last_Name varchar(255),
+	Email varchar(25),
+	Pass varchar(255),
+	User_Type int,
+	User_Profile varchar(255),
+	Date_Of_Birth varchar(255),
+	Gender varchar(255),
+	Phone varchar(255),
+	Order_id int
+)
