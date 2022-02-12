@@ -6,9 +6,9 @@
 
 
 <section id="home">
-    <div class="container">
-        <div class="row w-100">
-            <div class="cols-lg-4 col-md-4 ms-auto me-auto">
+    <div class="container mb-5">
+        <div class="row w-100 justify-content-center">
+            <div class="cols-lg-4 col-md-4 ms-auto me-auto mt-5 mb-5">
                 <h2 class="text-center mt-5">LOGIN</h2>
 
                 <form method="post" class="container mt-5" action="~/Account/Login">
@@ -22,10 +22,10 @@
                         <input type="password" name="pass" class="form-control" placeholder="Enter Password" required />
                     </div>
 
-                    <div class="form-group mb-3">
+                    <div class="form-group mb-5">
                         <input type="submit" value="Login" class="btn btn-outline-dark" placeholder="Login" />
                         <p class="text-danger">@ViewBag.emailerror</p>
-                        <small>Do not have an Account? <a class="text-primary" href="@Url.Action("Register", "Account")"> CREATE ACCOUNT</a></small>
+                        <small>Do not have an Account? <a class="text-primary" href="@Url.Action("Register", "Home")"> CREATE ACCOUNT</a></small>
                     </div>
                 </form>
             </div>

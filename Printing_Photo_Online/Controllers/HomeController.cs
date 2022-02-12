@@ -35,7 +35,6 @@ namespace Printing_Photo_Online.Controllers
         //==============================================================
         public ActionResult Register()
         {
-            ViewBag.reg = "yes";
             return View();
         }
         [HttpPost]
@@ -57,7 +56,7 @@ namespace Printing_Photo_Online.Controllers
 
                     var myimg = filename + rnd.Next() + exten;
 
-                    image.SaveAs(@"D:\E-Project\Printing_Photo_Online\profile_img\" + myimg);
+                    image.SaveAs(@"D:\E-Project\2nd_Sem_E-Project 2022\Printing_Photo_Online\profile_img\" + myimg);
 
                     data.First_Name = Request.Form["firstname"];
                     data.Last_Name = Request.Form["lastname"];
