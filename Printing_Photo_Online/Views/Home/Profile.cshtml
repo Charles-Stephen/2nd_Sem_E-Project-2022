@@ -1,18 +1,70 @@
 ﻿@model Printing_Photo_Online.user
-
+@model Printing_Photo_Online.order order
+@model Printing_Photo_Online.category category
 @{
     ViewBag.Title = "Profile";
     Layout = "~/Views/Shared/Frontend_Layout.cshtml";
 }
 
+<section class="container">
+    <h2 style="margin-left: 5vw; margin-top: 4vw; font-weight: 500" class="mb-5">Profile</h2>
 
-
-<section id="home">
-    <h2 class="mt-5">Profile</h2>
-
-    <div align="center" class="w-100 container">
-        <img id="output" class="rounded-circle" src=" style="width: 20vw; height: 20vw; border: solid black 1px;" />
+    <div align="center" class="form-group mb-3 w-100">
+        <img src="~/profile_img/@Session["profile"]" alt="Not Available" class="rounded-circle mt-5" style="width: 20vw; height: 20vw; border: solid black 1px;" />
+        <h1>@Session["name"]</h1>
     </div>
 
-    <h1 class="text-center">@Session["name"]</h1>
+    <div class="d-flex vw-100">
+        <div style="margin-top: 5vw; width: 28vw; box-shadow: -3px -3px 10px 5px grey;">
+            <div class="container">
+                <h4 class="ms-5 mt-5">Personal Info.</h4>
+
+
+                <table class="ms-5 mt-5 mb-3">
+                    <tr class="mb-3">
+                        <td>First Name :</td>
+                        <td><span style="visibility:hidden">000</span>@Model.First_Name</td>
+                    </tr>
+
+                    <tr class="mb-3">
+                        <td>Last Name :</td>
+                        <td><span style="visibility:hidden">000</span>@Model.Last_Name</td>
+                    </tr>
+
+                    <tr class="mb-3">
+                        <td>Email :</td>
+                        <td><span style="visibility:hidden">000</span>@Model.Email</td>
+                    </tr>
+
+                    <tr class="mb-3">
+                        <td>Password :</td>
+                        <td><span style="visibility:hidden">000</span>@Model.Pass</td>
+                    </tr>
+
+                    <tr class="mb-3">
+                        <td>Date Of Birth :</td>
+                        <td><span style="visibility:hidden">000</span>@Model.Date_Of_Birth</td>
+                    </tr>
+
+                    <tr class="mb-5 mt-5">
+                        <td>Gender :</td>
+                        <td><span style="visibility:hidden">000</span>@Model.Gender</td>
+                    </tr>
+
+                    <tr class="mb-5">
+                        <td>Phone :</td>
+                        <td><span style="visibility:hidden">000</span>@Model.Phone</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div style="margin-top: 5vw;">
+            <div class="container">
+                <h2 class="mt-5">Orders</h2>
+                @model category.Category_Name
+            </div>
+        </div>
+    </div>
+
 </section>

@@ -1,639 +1,646 @@
-﻿
+﻿@model IEnumerable<Printing_Photo_Online.user>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Frontend_Layout.cshtml";
 }
 
 
-		<!-- START BANNER -->
-		<section id="home">
-			<div class="slider-area demo-banner">
-				<div class="slider-wrapper vh d-flex">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="demo-content text-left">
-									<h1><span>Enabling </span><br />to grow organizations of your things</h1>
-									<p>Our world wide Powerful Websites For Business! it is the best method of Business! 
-									Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt </p>
-									<a href="#demo">Explore  Demos<i class="las la-arrow-right"></i></a>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="banner-images" style="background-image:url(frontend/img/bg3.jpg)">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- END BANNER -->
-		<!-- START SERVICE -->
-		<div id="service" class="section section-service">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 col-lg-4 left-sidebar">
-						<div class="section-tittle section-sticky text-left">
-							<div class="tittle-detail">
-								<span class="line-bg">Services</span>
-								<h2> We provide service</h2>
-								<p>Rearrange the entire color palette, making your site unique and beautiful.theme using a wide selection </p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 mt-5">
-						<div class="row">
-							<div class="col-lg-12 col-md-6">
-								<div class="single-service-features box-border text-center">
-									<div class="service-icon">	
-										<img src="~/frontend/img/icon/server%20(1).png" alt="" />
-									</div>
-									<div class="services-content">
-										<h3>Marketing Campaigns</h3>
-										<p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy text</p>
-									</div>
-								</div>
-							</div>					
-							<div class="col-lg-12 col-md-6">
-								<div class="single-service-features box-border text-center">
-									<div class="service-icon">	
-										<img src="~/frontend/img/icon/list%20(2).png" alt="" />
-									</div>
-									<div class="services-content">
-										<h3> Content Creation</h3>
-										<p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy text</p>
-									</div>
-								</div>
-							</div>	
-							<div class="col-lg-12 col-md-6">
-								<div class="single-service-features box-border text-center">
-									<div class="service-icon">	
-										<img src="~/frontend/img/icon/notebook.png" alt="" />
-									</div>
-									<div class="services-content">
-										<h3>Video Production</h3>
-										<p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy text</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="row">
-							<div class="col-lg-12 col-md-6">	
-								<div class="single-service-features box-border text-center">
-									<div class="service-icon">	
-										<img src="~/frontend/img/icon/group.png" alt="" />
-									</div>
-									<div class="services-content">
-										<h3>Typography & Writting</h3>
-										<p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy text</p>
-									</div>
-								</div>
-							</div>							
-							<div class="col-lg-12 col-md-6">	
-								<div class="single-service-features box-border text-center">
-									<div class="service-icon">	
-										<img src="~/frontend/img/icon/help.png" alt="" />
-									</div>
-									<div class="services-content">
-										<h3>UX/UI Design & Website</h3>
-										<p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy text</p>
-									</div>
-								</div>
-							</div>	
-							<div class="col-lg-12 col-md-6">	
-								<div class="single-service-features box-border text-center">
-									<div class="service-icon">	
-										<img src="~/frontend/img/icon/tick.png" alt="" />
-									</div>
-									<div class="services-content">
-										<h3>Branding Strategy</h3>
-										<p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy text</p>
-									</div>
-								</div>
-							</div>					
-						</div>	
-					</div>	
-				</div>
-			</div>			
-		</div>
-		<!-- END SERVICE -->
-		<!-- START ABOUT -->
-		<div id="about" class="section section-about">
-			<div class="container">
-				<div class="row mb-30">						
-					<div class="col-md-7">
-						<div class="about-slider owl-carousel">
-							<div class="about-img">
-								<img src="~/frontend/img/bg1.jpg" alt="finann" />
-							</div>
-							<div class="about-img">
-								<img src="~/frontend/img/abt1.jpg" alt="finann" />
-							</div>
-							<div class="about-img">
-								<img src="~/frontend/img/abt2.jpg" alt="finann" />
-							</div>
-						</div>
-					</div>
-					<div class="col-md-5">
-						<div class="about-detail">
-							<div class="section-tittle">
-								<span class="line-bg">About Us</span>
-							</div>							
-							<h3 class="text-black">We help to create our visual strategies.</h3>
-							<p>Far far away, behind the word mountains, far from the countries and if Vokalia Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics language ocean.</p>														
-							<div class="about-btn">
-								<a href="#">Know More<i class="las la-arrow-right"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- END ABOUT -->
-		<!-- START PORTFOLIO -->
-		<div id="portfolio" class="section section-portfolio">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 col-lg-4 left-sidebar">
-						<div class="section-tittle section-sticky-2 text-left">
-							<div class="tittle-detail">
-								<span class="line-bg">portfolio</span>
-								<h2>Our popular works</h2>
-								<p>Rearrange the entire color palette, making your site unique and beautiful.theme using a wide selection </p>
-							</div>
-						</div>
-					</div>												
-					<div class="col-lg-4 mt-5">
-						<div class="row">
-							<div class="col-lg-12 col-md-6 grid-item cat1 cat3">
-								<div class="portfolio-wrapper mb-30">
-									<div class="portfolio-img">
-										<img src="~/frontend/img/portfolio/1.jpg" alt="">
-										<div class="portfolio-content">											
-											<h4><a href="#">Captive Bright Utensil</a></h4>
-											<span>branding</span>
-										</div>
-										<i class="las la-arrow-right"></i>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-12 col-md-6 grid-item cat2 cat4">
-								<div class="portfolio-wrapper mb-30">
-									<div class="portfolio-img">
-										<img src="~/frontend/img/portfolio/6.jpg" alt="">
-										<div class="portfolio-content">											
-											<h4><a href="#">Captive Bright Utensil</a></h4>
-											<span>branding</span>
-										</div>
-										<i class="las la-arrow-right"></i>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-12 col-md-6 grid-item cat5 cat3 cat1">
-								<div class="portfolio-wrapper mb-30">
-									<div class="portfolio-img">
-										<img src="~/frontend/img/portfolio/3.jpg" alt="">
-										<div class="portfolio-content">											
-											<h4><a href="#">Captive Bright Utensil</a></h4>
-											<span>branding</span>
-										</div>
-										<i class="las la-arrow-right"></i>
-									</div>
-								</div>
-							</div>
-						</div>								
-					</div>
-					<div class="col-lg-4">
-						<div class="row">															
-							<div class="col-lg-12 col-md-6 grid-item cat4 cat1">
-								<div class="portfolio-wrapper mb-30">
-									<div class="portfolio-img">
-										<img src="~/frontend/img/portfolio/4.jpg" alt="">									
-										<div class="portfolio-content">											
-											<h4><a href="#">Captive Bright Utensil</a></h4>
-											<span>branding</span>
-										</div>
-										<i class="las la-arrow-right"></i>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-12 col-md-6 grid-item cat2 cat4">
-								<div class="portfolio-wrapper mb-30">
-									<div class="portfolio-img">
-										<img src="~/frontend/img/portfolio/5.jpg" alt="">
-										<div class="portfolio-content">											
-											<h4><a href="#">Captive Bright Utensil</a></h4>
-											<span>branding</span>
-										</div>
-										<i class="las la-arrow-right"></i>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-12 col-md-6 grid-item cat1 cat3 cat5">
-								<div class="portfolio-wrapper mb-30">
-									<div class="portfolio-img">
-										<img src="~/frontend/img/portfolio/2.jpg" alt="">
-										<div class="portfolio-content">											
-											<h4><a href="#">Captive Bright Utensil</a></h4>
-											<span>branding</span>
-										</div>
-										<i class="las la-arrow-right"></i>
-									</div>
-								</div>
-							</div>						
-						</div>											
-					</div>						
-				</div>
-			</div>
-		</div>
-		<!-- END PORTFOLIO -->
-		<!-- START VIDEOS -->
-		<section class="cta-section section">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 col-sm-12 offset-sm-0 text-left mb-30">
-						<div class="cta-video cta-detail inter-title item">
-							<div class="video-holder-2 mb-30">
-								<a href="https://www.youtube.com/embed/7e90gBu4pas?autoplay=1" class="video-btn" data-type="iframe">												
-									<span class="video-btn-style margin-10px-right margin-15px-bottom">
-										<i class="fa fa-play"></i>
-									</span>
-								</a>
-							</div>
-							<h2>Quality makes the <br> belief for customers</h2>
-							<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>							
-							<div class="about-btn">
-								<a href="#">Know More<i class="las la-arrow-right"></i></a>
-							</div>
-						</div>
-				   </div>
-				</div>
-			</div> 
-		</section>
-		<!-- END VIDEOS -->
-		<!-- START TEAM -->
-		<div id="team" class="section section-team">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 col-lg-4 left-sidebar">
-						<div class="section-tittle section-sticky-3 text-left">
-							<div class="tittle-detail">
-								<span class="line-bg">team</span>
-								<h2>People Behind Success</h2>
-								<p>Rearrange the entire color palette, making your site unique and beautiful.theme using a wide selection </p>
-							</div>
-						</div>
-					</div>				
-					<div class="col-lg-8">
-						<div class="row">
-							<div class="col-lg-12 col-md-6 mb-30">
-								<div class="team-wrapper item">
-									<div class="team-img">
-										<img src="~/frontend/img/team/team1.jpg" alt="">
-									</div>
-									<div class="team-text">
-										<span>CEO & Founder</span>
-										<a href="#"><h4>Michael Redux</h4></a>
-										<p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy</p>										
-										<div class="team-icon">
-											<a href="#"><i class="fa fa-facebook"></i></a>
-											<a href="#"><i class="fa fa-twitter"></i></a>
-											<a href="#"><i class="fa fa-google"></i></a>
-											<a href="#"><i class="fa fa-instagram"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-12 col-md-6 mb-30">
-								<div class="team-wrapper item">
-									<div class="team-img">
-										<img src="~/frontend/img/team/team2.jpg" alt="">
-									</div>
-									<div class="team-text">
-										<span>Creative</span>
-										<a href="#"><h4>Laila Francis</h4></a>
-										<p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy</p>										
-										<div class="team-icon">
-											<a href="#"><i class="fa fa-facebook"></i></a>
-											<a href="#"><i class="fa fa-twitter"></i></a>
-											<a href="#"><i class="fa fa-google"></i></a>
-											<a href="#"><i class="fa fa-instagram"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-12 col-md-6 mb-30">
-								<div class="team-wrapper item">
-									<div class="team-img">
-										<img src="~/frontend/img/team/team3.jpg" alt="">
-									</div>
-									<div class="team-text">
-										<span>Desginer</span>
-										<a href="#"><h4>James Fread</h4></a>
-										<p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy</p>										
-										<div class="team-icon">
-											<a href="#"><i class="fa fa-facebook"></i></a>
-											<a href="#"><i class="fa fa-twitter"></i></a>
-											<a href="#"><i class="fa fa-google"></i></a>
-											<a href="#"><i class="fa fa-instagram"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-12 col-md-6 mb-30">
-								<div class="team-wrapper item">
-									<div class="team-img">
-										<img src="~/frontend/img/team/team4.jpg" alt="">
-									</div>
-									<div class="team-text">
-										<span>Administrator</span>
-										<a href="#"><h4>Stella Smith</h4></a>
-										<p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy</p>										
-										<div class="team-icon">
-											<a href="#"><i class="fa fa-facebook"></i></a>
-											<a href="#"><i class="fa fa-twitter"></i></a>
-											<a href="#"><i class="fa fa-google"></i></a>
-											<a href="#"><i class="fa fa-instagram"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>				
-				</div>
-			</div>			
-		</div>
-		<!-- END TEAM -->
-		<!-- START REVIEW -->
-		<div class="section review-area section-divide">
-			<div class="container">
-				<div class="row">					
-					<div class="col-lg-4">
-						<div class="row">
-							<div class="col-lg-12 col-md-6">
-								<div class="testimonials-grids mb-30">
-									<div class="grid4">
-										<div class="test-img">
-											<img src="~/frontend/img/r1.jpg"></a>											
-										</div>
-										<div class="rating">
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="test-tittle">
-											<h3>Rose Garle</h3>
-											<span>CEO, Compamy</span>
-										</div>
-										<div class="details">
-											<p>Exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duisaute irure dolor in repre hender.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-12 col-md-6">
-								<div class="testimonials-grids mb-30">
-									<div class="grid4">
-										<div class="test-img">
-											<img src="~/frontend/img/r3.jpg"></a>											
-										</div>
-										<div class="rating">
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="test-tittle">
-											<h3>Emily Barrow</h3>
-											<span>CEO, Compamy</span>
-										</div>
-										<div class="details">
-											<p>Exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duisaute irure dolor in repre hender.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 mt-5">
-						<div class="row">
-							<div class="col-lg-12 col-md-6">
-								<div class="testimonials-grids mb-30">
-									<div class="grid4">
-										<div class="test-img">
-											<img src="~/frontend/img/r2.jpg"></a>											
-										</div>
-										<div class="rating">
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="test-tittle">
-											<h3>Lisa Redfern</h3>
-											<span>CEO, Compamy</span>
-										</div>
-										<div class="details">
-											<p>Exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duisaute irure dolor in repre hender.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-12 col-md-6">
-								<div class="testimonials-grids mb-30">
-									<div class="grid4">
-										<div class="test-img">
-											<img src="~/frontend/img/r4.jpg"></a>											
-										</div>
-										<div class="rating">
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="test-tittle">
-											<h3>Amy Adams</h3>
-											<span>CEO, Compamy</span>
-										</div>
-										<div class="details">
-											<p>Exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duisaute irure dolor in repre hender.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-12 col-lg-4 left-sidebar">
-						<div class="section-tittle text-left">
-							<div class="tittle-detail">
-								<span class="line-bg">client</span>
-								<h2>Our Client Review</h2>
-								<p>Rearrange the entire color palette, making your site unique and beautiful.theme using a wide selection </p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>		
-		<!-- END REVIEW -->
-		<!-- START BLOG -->
-		<div id="blog" class="section section-blog">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 col-lg-4 left-sidebar">
-						<div class="section-tittle section-sticky-3 text-left">
-							<div class="tittle-detail">
-								<span class="line-bg">blog</span>
-								<h2>Our Latest News & Blogs</h2>
-								<p>Rearrange the entire color palette, making your site unique and beautiful.theme using a wide selection </p>
-							</div>
-						</div>
-					</div>				
-					<div class="col-lg-8">
-						<div class="row">
-							<div class="col-lg-12 col-md-6 mb-30">
-								<figure class="snip1208">
-									<img src="~/frontend/img/blog/2.jpg" alt="">
-									<div class="date">
-										<span class="day">24</span>
-										<span class="month">May</span>								
-									</div>
-									<i class="las la-user"></i>
-									<figcaption>
-										<a href="#"><h4>The Start-Up Guide to Make Your Business.</h4></a>
-										<p>Lorem ipsum dolor sit amet, sed do eiusmod teminc ididunt ut labore et dolore.Lorem ipsum dolor.</p>
-										<div class="figure-btn">
-											<a href="#">Read More..</a>
-										</div>									
-									</figcaption>
-								</figure>
-							</div>
-							<div class="col-lg-12 col-md-6 mb-30">
-								<figure class="snip1208">
-									<img src="~/frontend/img/blog/6.jpg" alt="">
-									<div class="date">
-										<span class="day">13</span>
-										<span class="month">Jun</span>								
-									</div>
-									<i class="las la-user"></i>
-									<figcaption>
-										<a href="#"><h4>Build Your Website Into Design Automatically.</h4></a>
-										<p>Lorem ipsum dolor sit amet, sed do eiusmod teminc ididunt ut labore et dolore.Lorem ipsum dolor.</p>
-										<div class="figure-btn">
-											<a href="#">Read More..</a>
-										</div>									
-									</figcaption>
-								</figure>
-							</div>
-							<div class="col-lg-12 col-md-6 mb-30">
-								<figure class="snip1208">
-									<img src="~/frontend/img/blog/3.jpg" alt="">
-									<div class="date">
-										<span class="day">28</span>
-										<span class="month">Aug</span>								
-									</div>
-									<i class="las la-user"></i>
-									<figcaption>
-										<a href="#"><h4>Outdoor Work: a Designer’s for Every UX Project.</h4></a>
-										<p>Lorem ipsum dolor sit amet, sed do eiusmod teminc ididunt ut labore et dolore.Lorem ipsum dolor.</p>
-										<div class="figure-btn">
-											<a href="#">Read More..</a>
-										</div>									
-									</figcaption>
-								</figure>
-							</div>
-							<div class="col-lg-12 col-md-6 mb-30">
-								<figure class="snip1208">
-									<img src="~/frontend/img/blog/4.jpg" alt="">
-									<div class="date">
-										<span class="day">17</span>
-										<span class="month">Sep</span>								
-									</div>
-									<i class="las la-user"></i>
-									<figcaption>
-										<a href="#"><h4>Team Management Brand strategy of your website.</h4></a>
-										<p>Lorem ipsum dolor sit amet, sed do eiusmod teminc ididunt ut labore et dolore.Lorem ipsum dolor.</p>
-										<div class="figure-btn">
-											<a href="#">Read More..</a>
-										</div>									
-									</figcaption>
-								</figure>
-							</div>
-						</div>
-					</div>				
-				</div>
-			</div>			
-		</div>
-		<!-- END BLOG -->
-		<!-- START CONTACT -->
-		<div id="contact" class="section section-contact">
-			<div class="container">
-				<div class="row ">
-					<div class="col-xl-6 col-md-6 contact-padd">
-						<div class="section-tittle text-center">
-							<div class="tittle-detail">
-								<span class="text-gradient">contact</span>
-								<h2>Personal Info</h2>
-								<p>Rearrange the entire color palette, making your site unique and beautiful.theme using a wide selection </p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-xl-6 col-md-6 mb-30">	
-								<div class="detail-share mll-bottom">
-									<div>
-									   <i class="la la-map-marker-alt"></i>
-									</div>
-									<div class="contact-title">
-										<h5>Visit Office</h5>
-										<p>55, Lvabbari. Street, USA.</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-6 col-md-6 mb-30">
-								<div class="detail-share mll-bottom">
-									<div>
-										<i class="las la-globe"></i>
-									</div>
-									<div class="contact-title">
-										<h5>Website</h5>
-										<p>http://yoursite.com</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>								
-					<div class="col-md-6">
-						<div class="ask-middle mb-30">
-							<div class="comment-respond">
-								<form class="clearfix">
-									<div class="col col-xs-12">
-										<textarea class="form-control" placeholder="write.."></textarea>
-									</div>
-									<div class="col col-md-6">
-										<input type="text" class="form-control" placeholder="First Name..">
-									</div>
-									<div class="col col-md-6">
-										<input type="text" class="form-control" placeholder="Last Name..">
-									</div>
-									<div class="col col-xs-12">
-										<input type="email" class="form-control" placeholder="Email Address..">
-									</div>
-									<div class="col col-xs-12 submit-btn">
-										<button type="submit">Send Message</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- END CONTACT -->
+<!-- START BANNER -->
+<section id="home">
+    <div class="slider-area demo-banner">
+        <div class="slider-wrapper vh d-flex">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="demo-content text-left">
+                            <h1><span>Enabling </span><br />to grow organizations of your things</h1>
+                            <p>
+                                Our world wide Powerful Websites For Business! it is the best method of Business!
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt
+                            </p>
+                            <a href="#demo">Explore  Demos<i class="las la-arrow-right"></i></a>
+                            @foreach (var item in Model)
+                            {                    
+                                @Html.ActionLink("prof", "Profile", new { id = item.id })
+                            }
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="banner-images" style="background-image:url(frontend/img/bg3.jpg)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END BANNER -->
+<!-- START SERVICE -->
+<div id="service" class="section section-service">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-4 left-sidebar">
+                <div class="section-tittle section-sticky text-left">
+                    <div class="tittle-detail">
+                        <span class="line-bg">Services</span>
+                        <h2> We provide service</h2>
+                        <p>Rearrange the entire color palette, making your site unique and beautiful.theme using a wide selection </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-5">
+                <div class="row">
+                    <div class="col-lg-12 col-md-6">
+                        <div class="single-service-features box-border text-center">
+                            <div class="service-icon">
+                                <img src="~/frontend/img/icon/server%20(1).png" alt="" />
+                            </div>
+                            <div class="services-content">
+                                <h3>Marketing Campaigns</h3>
+                                <p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy text</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6">
+                        <div class="single-service-features box-border text-center">
+                            <div class="service-icon">
+                                <img src="~/frontend/img/icon/list%20(2).png" alt="" />
+                            </div>
+                            <div class="services-content">
+                                <h3> Content Creation</h3>
+                                <p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy text</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6">
+                        <div class="single-service-features box-border text-center">
+                            <div class="service-icon">
+                                <img src="~/frontend/img/icon/notebook.png" alt="" />
+                            </div>
+                            <div class="services-content">
+                                <h3>Video Production</h3>
+                                <p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy text</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-12 col-md-6">
+                        <div class="single-service-features box-border text-center">
+                            <div class="service-icon">
+                                <img src="~/frontend/img/icon/group.png" alt="" />
+                            </div>
+                            <div class="services-content">
+                                <h3>Typography & Writting</h3>
+                                <p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy text</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6">
+                        <div class="single-service-features box-border text-center">
+                            <div class="service-icon">
+                                <img src="~/frontend/img/icon/help.png" alt="" />
+                            </div>
+                            <div class="services-content">
+                                <h3>UX/UI Design & Website</h3>
+                                <p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy text</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6">
+                        <div class="single-service-features box-border text-center">
+                            <div class="service-icon">
+                                <img src="~/frontend/img/icon/tick.png" alt="" />
+                            </div>
+                            <div class="services-content">
+                                <h3>Branding Strategy</h3>
+                                <p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy text</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END SERVICE -->
+<!-- START ABOUT -->
+<div id="about" class="section section-about">
+    <div class="container">
+        <div class="row mb-30">
+            <div class="col-md-7">
+                <div class="about-slider owl-carousel">
+                    <div class="about-img">
+                        <img src="~/frontend/img/bg1.jpg" alt="finann" />
+                    </div>
+                    <div class="about-img">
+                        <img src="~/frontend/img/abt1.jpg" alt="finann" />
+                    </div>
+                    <div class="about-img">
+                        <img src="~/frontend/img/abt2.jpg" alt="finann" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="about-detail">
+                    <div class="section-tittle">
+                        <span class="line-bg">About Us</span>
+                    </div>
+                    <h3 class="text-black">We help to create our visual strategies.</h3>
+                    <p>Far far away, behind the word mountains, far from the countries and if Vokalia Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics language ocean.</p>
+                    <div class="about-btn">
+                        <a href="#">Know More<i class="las la-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END ABOUT -->
+<!-- START PORTFOLIO -->
+<div id="portfolio" class="section section-portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-4 left-sidebar">
+                <div class="section-tittle section-sticky-2 text-left">
+                    <div class="tittle-detail">
+                        <span class="line-bg">portfolio</span>
+                        <h2>Our popular works</h2>
+                        <p>Rearrange the entire color palette, making your site unique and beautiful.theme using a wide selection </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-5">
+                <div class="row">
+                    <div class="col-lg-12 col-md-6 grid-item cat1 cat3">
+                        <div class="portfolio-wrapper mb-30">
+                            <div class="portfolio-img">
+                                <img src="~/frontend/img/portfolio/1.jpg" alt="">
+                                <div class="portfolio-content">
+                                    <h4><a href="#">Captive Bright Utensil</a></h4>
+                                    <span>branding</span>
+                                </div>
+                                <i class="las la-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6 grid-item cat2 cat4">
+                        <div class="portfolio-wrapper mb-30">
+                            <div class="portfolio-img">
+                                <img src="~/frontend/img/portfolio/6.jpg" alt="">
+                                <div class="portfolio-content">
+                                    <h4><a href="#">Captive Bright Utensil</a></h4>
+                                    <span>branding</span>
+                                </div>
+                                <i class="las la-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6 grid-item cat5 cat3 cat1">
+                        <div class="portfolio-wrapper mb-30">
+                            <div class="portfolio-img">
+                                <img src="~/frontend/img/portfolio/3.jpg" alt="">
+                                <div class="portfolio-content">
+                                    <h4><a href="#">Captive Bright Utensil</a></h4>
+                                    <span>branding</span>
+                                </div>
+                                <i class="las la-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-12 col-md-6 grid-item cat4 cat1">
+                        <div class="portfolio-wrapper mb-30">
+                            <div class="portfolio-img">
+                                <img src="~/frontend/img/portfolio/4.jpg" alt="">
+                                <div class="portfolio-content">
+                                    <h4><a href="#">Captive Bright Utensil</a></h4>
+                                    <span>branding</span>
+                                </div>
+                                <i class="las la-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6 grid-item cat2 cat4">
+                        <div class="portfolio-wrapper mb-30">
+                            <div class="portfolio-img">
+                                <img src="~/frontend/img/portfolio/5.jpg" alt="">
+                                <div class="portfolio-content">
+                                    <h4><a href="#">Captive Bright Utensil</a></h4>
+                                    <span>branding</span>
+                                </div>
+                                <i class="las la-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6 grid-item cat1 cat3 cat5">
+                        <div class="portfolio-wrapper mb-30">
+                            <div class="portfolio-img">
+                                <img src="~/frontend/img/portfolio/2.jpg" alt="">
+                                <div class="portfolio-content">
+                                    <h4><a href="#">Captive Bright Utensil</a></h4>
+                                    <span>branding</span>
+                                </div>
+                                <i class="las la-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END PORTFOLIO -->
+<!-- START VIDEOS -->
+<section class="cta-section section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 offset-sm-0 text-left mb-30">
+                <div class="cta-video cta-detail inter-title item">
+                    <div class="video-holder-2 mb-30">
+                        <a href="https://www.youtube.com/embed/7e90gBu4pas?autoplay=1" class="video-btn" data-type="iframe">
+                            <span class="video-btn-style margin-10px-right margin-15px-bottom">
+                                <i class="fa fa-play"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <h2>Quality makes the <br> belief for customers</h2>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                    <div class="about-btn">
+                        <a href="#">Know More<i class="las la-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END VIDEOS -->
+<!-- START TEAM -->
+<div id="team" class="section section-team">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-4 left-sidebar">
+                <div class="section-tittle section-sticky-3 text-left">
+                    <div class="tittle-detail">
+                        <span class="line-bg">team</span>
+                        <h2>People Behind Success</h2>
+                        <p>Rearrange the entire color palette, making your site unique and beautiful.theme using a wide selection </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-12 col-md-6 mb-30">
+                        <div class="team-wrapper item">
+                            <div class="team-img">
+                                <img src="~/frontend/img/team/team1.jpg" alt="">
+                            </div>
+                            <div class="team-text">
+                                <span>CEO & Founder</span>
+                                <a href="#"><h4>Michael Redux</h4></a>
+                                <p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy</p>
+                                <div class="team-icon">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6 mb-30">
+                        <div class="team-wrapper item">
+                            <div class="team-img">
+                                <img src="~/frontend/img/team/team2.jpg" alt="">
+                            </div>
+                            <div class="team-text">
+                                <span>Creative</span>
+                                <a href="#"><h4>Laila Francis</h4></a>
+                                <p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy</p>
+                                <div class="team-icon">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6 mb-30">
+                        <div class="team-wrapper item">
+                            <div class="team-img">
+                                <img src="~/frontend/img/team/team3.jpg" alt="">
+                            </div>
+                            <div class="team-text">
+                                <span>Desginer</span>
+                                <a href="#"><h4>James Fread</h4></a>
+                                <p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy</p>
+                                <div class="team-icon">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6 mb-30">
+                        <div class="team-wrapper item">
+                            <div class="team-img">
+                                <img src="~/frontend/img/team/team4.jpg" alt="">
+                            </div>
+                            <div class="team-text">
+                                <span>Administrator</span>
+                                <a href="#"><h4>Stella Smith</h4></a>
+                                <p>Here are many variations of passages of check Lorem Ipsum has been industry's standard dummy</p>
+                                <div class="team-icon">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END TEAM -->
+<!-- START REVIEW -->
+<div class="section review-area section-divide">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-12 col-md-6">
+                        <div class="testimonials-grids mb-30">
+                            <div class="grid4">
+                                <div class="test-img">
+                                    <img src="~/frontend/img/r1.jpg"></a>
+                                </div>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="test-tittle">
+                                    <h3>Rose Garle</h3>
+                                    <span>CEO, Compamy</span>
+                                </div>
+                                <div class="details">
+                                    <p>Exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duisaute irure dolor in repre hender.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6">
+                        <div class="testimonials-grids mb-30">
+                            <div class="grid4">
+                                <div class="test-img">
+                                    <img src="~/frontend/img/r3.jpg"></a>
+                                </div>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="test-tittle">
+                                    <h3>Emily Barrow</h3>
+                                    <span>CEO, Compamy</span>
+                                </div>
+                                <div class="details">
+                                    <p>Exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duisaute irure dolor in repre hender.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-5">
+                <div class="row">
+                    <div class="col-lg-12 col-md-6">
+                        <div class="testimonials-grids mb-30">
+                            <div class="grid4">
+                                <div class="test-img">
+                                    <img src="~/frontend/img/r2.jpg"></a>
+                                </div>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="test-tittle">
+                                    <h3>Lisa Redfern</h3>
+                                    <span>CEO, Compamy</span>
+                                </div>
+                                <div class="details">
+                                    <p>Exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duisaute irure dolor in repre hender.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6">
+                        <div class="testimonials-grids mb-30">
+                            <div class="grid4">
+                                <div class="test-img">
+                                    <img src="~/frontend/img/r4.jpg"></a>
+                                </div>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="test-tittle">
+                                    <h3>Amy Adams</h3>
+                                    <span>CEO, Compamy</span>
+                                </div>
+                                <div class="details">
+                                    <p>Exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duisaute irure dolor in repre hender.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-4 left-sidebar">
+                <div class="section-tittle text-left">
+                    <div class="tittle-detail">
+                        <span class="line-bg">client</span>
+                        <h2>Our Client Review</h2>
+                        <p>Rearrange the entire color palette, making your site unique and beautiful.theme using a wide selection </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END REVIEW -->
+<!-- START BLOG -->
+<div id="blog" class="section section-blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-4 left-sidebar">
+                <div class="section-tittle section-sticky-3 text-left">
+                    <div class="tittle-detail">
+                        <span class="line-bg">blog</span>
+                        <h2>Our Latest News & Blogs</h2>
+                        <p>Rearrange the entire color palette, making your site unique and beautiful.theme using a wide selection </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-12 col-md-6 mb-30">
+                        <figure class="snip1208">
+                            <img src="~/frontend/img/blog/2.jpg" alt="">
+                            <div class="date">
+                                <span class="day">24</span>
+                                <span class="month">May</span>
+                            </div>
+                            <i class="las la-user"></i>
+                            <figcaption>
+                                <a href="#"><h4>The Start-Up Guide to Make Your Business.</h4></a>
+                                <p>Lorem ipsum dolor sit amet, sed do eiusmod teminc ididunt ut labore et dolore.Lorem ipsum dolor.</p>
+                                <div class="figure-btn">
+                                    <a href="#">Read More..</a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-12 col-md-6 mb-30">
+                        <figure class="snip1208">
+                            <img src="~/frontend/img/blog/6.jpg" alt="">
+                            <div class="date">
+                                <span class="day">13</span>
+                                <span class="month">Jun</span>
+                            </div>
+                            <i class="las la-user"></i>
+                            <figcaption>
+                                <a href="#"><h4>Build Your Website Into Design Automatically.</h4></a>
+                                <p>Lorem ipsum dolor sit amet, sed do eiusmod teminc ididunt ut labore et dolore.Lorem ipsum dolor.</p>
+                                <div class="figure-btn">
+                                    <a href="#">Read More..</a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-12 col-md-6 mb-30">
+                        <figure class="snip1208">
+                            <img src="~/frontend/img/blog/3.jpg" alt="">
+                            <div class="date">
+                                <span class="day">28</span>
+                                <span class="month">Aug</span>
+                            </div>
+                            <i class="las la-user"></i>
+                            <figcaption>
+                                <a href="#"><h4>Outdoor Work: a Designer’s for Every UX Project.</h4></a>
+                                <p>Lorem ipsum dolor sit amet, sed do eiusmod teminc ididunt ut labore et dolore.Lorem ipsum dolor.</p>
+                                <div class="figure-btn">
+                                    <a href="#">Read More..</a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-12 col-md-6 mb-30">
+                        <figure class="snip1208">
+                            <img src="~/frontend/img/blog/4.jpg" alt="">
+                            <div class="date">
+                                <span class="day">17</span>
+                                <span class="month">Sep</span>
+                            </div>
+                            <i class="las la-user"></i>
+                            <figcaption>
+                                <a href="#"><h4>Team Management Brand strategy of your website.</h4></a>
+                                <p>Lorem ipsum dolor sit amet, sed do eiusmod teminc ididunt ut labore et dolore.Lorem ipsum dolor.</p>
+                                <div class="figure-btn">
+                                    <a href="#">Read More..</a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END BLOG -->
+<!-- START CONTACT -->
+<div id="contact" class="section section-contact">
+    <div class="container">
+        <div class="row ">
+            <div class="col-xl-6 col-md-6 contact-padd">
+                <div class="section-tittle text-center">
+                    <div class="tittle-detail">
+                        <span class="text-gradient">contact</span>
+                        <h2>Personal Info</h2>
+                        <p>Rearrange the entire color palette, making your site unique and beautiful.theme using a wide selection </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-md-6 mb-30">
+                        <div class="detail-share mll-bottom">
+                            <div>
+                                <i class="la la-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-title">
+                                <h5>Visit Office</h5>
+                                <p>55, Lvabbari. Street, USA.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-6 mb-30">
+                        <div class="detail-share mll-bottom">
+                            <div>
+                                <i class="las la-globe"></i>
+                            </div>
+                            <div class="contact-title">
+                                <h5>Website</h5>
+                                <p>http://yoursite.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="ask-middle mb-30">
+                    <div class="comment-respond">
+                        <form class="clearfix">
+                            <div class="col col-xs-12">
+                                <textarea class="form-control" placeholder="write.."></textarea>
+                            </div>
+                            <div class="col col-md-6">
+                                <input type="text" class="form-control" placeholder="First Name..">
+                            </div>
+                            <div class="col col-md-6">
+                                <input type="text" class="form-control" placeholder="Last Name..">
+                            </div>
+                            <div class="col col-xs-12">
+                                <input type="email" class="form-control" placeholder="Email Address..">
+                            </div>
+                            <div class="col col-xs-12 submit-btn">
+                                <button type="submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CONTACT -->

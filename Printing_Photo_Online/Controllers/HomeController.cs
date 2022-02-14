@@ -6,6 +6,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using System.IO;
+using Printing_Photo_Online;
 
 namespace Printing_Photo_Online.Controllers
 {
@@ -24,7 +25,11 @@ namespace Printing_Photo_Online.Controllers
         //==============================================================
         public ActionResult Index()
         {
-            return View();
+            ViewBag.let = 3;
+            ViewBag.reg = "555";
+
+            var user = db.users.ToList();
+            return View(user);
         }
 
 
@@ -91,15 +96,18 @@ namespace Printing_Photo_Online.Controllers
 
 
         //==============================================================
-        //              REGISTER
+        //              PROFILE
         //==============================================================
 
-        public ActionResult Profile()
+        public ActionResult Profile(int id)
         {
+            id = (int)Session["id"];
+
             if (Session["name"] != null)
             {
-                var data = db.users.ToList();
-                return View(data);
+                var udata = db.users.FirstOrDefault(c => c.id == id);
+
+                return View(udata);                
             }
             else if (Session["name"] == null)
             {

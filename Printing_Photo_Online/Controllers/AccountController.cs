@@ -266,7 +266,9 @@ namespace Printing_Photo_Online.Controllers
 
                 if (mylogin != null)
                 {
+                    Session["id"] = mylogin.id;
                     Session["name"] = mylogin.First_Name + " " + mylogin.Last_Name;
+                    Session["profile"] = mylogin.User_Profile;
                     Session["usertype"] = mylogin.User_Type;
 
 
