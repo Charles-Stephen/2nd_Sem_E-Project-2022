@@ -1,5 +1,7 @@
 ﻿@using Printing_Photo_Online;
 
+@model dynamic
+
 @{
     ViewBag.Title = "Profile";
     Layout = "~/Views/Shared/Frontend_Layout.cshtml";
@@ -21,37 +23,37 @@
 
 
                 <table class="ms-5 mt-5 mb-3">
-                    @foreach (user myuser in ViewBag.USERS)
-                    { 
-                        <tr class="mb-3">
-                            <td>First Name :</td>
-                            <td><span style="visibility:hidden">000</span>@myuser.First_Name</td>
-                        </tr>
+                    @foreach (user myuser in Model.
+                    {
+                    <tr class="mb-3">
+                        <td>First Name :</td>
+                        <td><span style="visibility:hidden">000</span>@myuser.First_Name</td>
+                    </tr>
 
-                        <tr class="mb-3">
-                            <td>Last Name :</td>
-                            <td><span style="visibility:hidden">000</span>@myuser.Last_Name</td>
-                        </tr>
+                    <tr class="mb-3">
+                        <td>Last Name :</td>
+                        <td><span style="visibility:hidden">000</span>@myuser.Last_Name</td>
+                    </tr>
 
-                        <tr class="mb-3">
-                            <td>Email :</td>
-                            <td><span style="visibility:hidden">000</span>@myuser.Email</td>
-                        </tr>
+                    <tr class="mb-3">
+                        <td>Email :</td>
+                        <td><span style="visibility:hidden">000</span>@myuser.Email</td>
+                    </tr>
 
-                        <tr class="mb-3">
-                            <td>Date Of Birth :</td>
-                            <td><span style="visibility:hidden">000</span>@myuser.Date_Of_Birth</td>
-                        </tr>
+                    <tr class="mb-3">
+                        <td>Date Of Birth :</td>
+                        <td><span style="visibility:hidden">000</span>@myuser.Date_Of_Birth</td>
+                    </tr>
 
-                        <tr class="mb-5 mt-5">
-                            <td>Gender :</td>
-                            <td><span style="visibility:hidden">000</span>@myuser.Gender</td>
-                        </tr>
+                    <tr class="mb-5 mt-5">
+                        <td>Gender :</td>
+                        <td><span style="visibility:hidden">000</span>@myuser.Gender</td>
+                    </tr>
 
-                        <tr class="mb-5">
-                            <td>Phone :</td>
-                            <td><span style="visibility:hidden">000</span>@myuser.Phone</td>
-                        </tr>
+                    <tr class="mb-5">
+                        <td>Phone :</td>
+                        <td><span style="visibility:hidden">000</span>@myuser.Phone</td>
+                    </tr>
                     }
                 </table>
             </div>
@@ -60,10 +62,10 @@
         <div style="margin-top: 5vw;">
             <div class="container">
                 <!--
-    ==============================================================================================================================================================
-                                                                ORDERS
-    ==============================================================================================================================================================
-    -->
+                ==============================================================================================================================================================
+                                                                            ORDERS
+                ==============================================================================================================================================================
+                -->
                 <h2 class="mt-5 text-center">All Orders</h2>
 
                 @foreach (Photograph myphoto in ViewBag.PHOTO)
@@ -133,10 +135,10 @@
 
 
                     <!--
-        ==============================================================================================================================================================
-                                                                    PHOTOGRAPHS
-        ==============================================================================================================================================================
-        -->
+                    ==============================================================================================================================================================
+                                                                                PHOTOGRAPHS
+                    ==============================================================================================================================================================
+                    -->
 
 
                     <h2 class="mt-5 text-center">My Photographs</h2>
@@ -149,19 +151,19 @@
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="Party-tab" data-bs-toggle="tab" data-bs-target="#Party" type="button" role="tab" aria-controls="Party" aria-selected="false">Party</button>
                         </li>
-                        
+
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="Nature-tab" data-bs-toggle="tab" data-bs-target="#Nature" type="button" role="tab" aria-controls="Nature" aria-selected="false">Nature</button>
                         </li>
-                        
+
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="Outing-tab" data-bs-toggle="tab" data-bs-target="#Outing" type="button" role="tab" aria-controls="Outing" aria-selected="false">Outing</button>
                         </li>
-                        
+
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="Function-tab" data-bs-toggle="tab" data-bs-target="#Function" type="button" role="tab" aria-controls="Function" aria-selected="false">Function</button>
                         </li>
-                        
+
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="Festival-tab" data-bs-toggle="tab" data-bs-target="#Festival" type="button" role="tab" aria-controls="Festival" aria-selected="false">Festival</button>
                         </li>
@@ -206,7 +208,7 @@
 
             </div>
         </div>
-    
+
     </div>
 
 </section>

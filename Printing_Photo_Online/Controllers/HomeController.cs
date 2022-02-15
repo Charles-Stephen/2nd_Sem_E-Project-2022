@@ -111,12 +111,13 @@ namespace Printing_Photo_Online.Controllers
                 ViewBag.CAT = db.categories;
                 ViewBag.PRICE = db.Price_Info;
 
-                user daat1 = new user();
-
-                var data2 = "llll";
-                var data3 = "lkkkk";
-
-                return View(data1, data2, data3);                
+                dynamic mymodel = new ExpandoObject();
+                mymodel.user = db.users.FirstOrDefault(u => u.id == id);
+                mymodel.order = db.orders.FirstOrDefault(o => o.UserId == id);
+                mymodel.photo = db.Photographs.FirstOrDefault(p => p.UserId == id);
+                mymodel.category = db.categories;
+                mymodel.price = db.Price_Info;
+                return View(mymodel); ;
             }
             else if (Session["name"] == null)
             {
