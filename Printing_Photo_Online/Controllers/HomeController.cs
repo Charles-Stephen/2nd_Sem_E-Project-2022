@@ -105,9 +105,18 @@ namespace Printing_Photo_Online.Controllers
 
             if (Session["name"] != null)
             {
-                var udata = db.users.FirstOrDefault(c => c.id == id);
+                ViewBag.USERS = db.users.FirstOrDefault(u => u.id == id);
+                ViewBag.ORDERS = db.orders.FirstOrDefault(o => o.UserId == id);
+                ViewBag.PHOTO = db.Photographs.FirstOrDefault(p => p.UserId == id);
+                ViewBag.CAT = db.categories;
+                ViewBag.PRICE = db.Price_Info;
 
-                return View(udata);                
+                user daat1 = new user();
+
+                var data2 = "llll";
+                var data3 = "lkkkk";
+
+                return View(data1, data2, data3);                
             }
             else if (Session["name"] == null)
             {
@@ -117,5 +126,8 @@ namespace Printing_Photo_Online.Controllers
             return View();
 
         }
+
+
+
     }
 }

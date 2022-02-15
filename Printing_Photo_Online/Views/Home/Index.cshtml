@@ -21,8 +21,10 @@
                             </p>
                             <a href="#demo">Explore  Demos<i class="las la-arrow-right"></i></a>
                             @foreach (var item in Model)
-                            {                    
+                            {
                                 @Html.ActionLink("prof", "Profile", new { id = item.id })
+
+
                             }
                         </div>
                     </div>

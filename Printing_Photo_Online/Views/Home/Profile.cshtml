@@ -1,6 +1,5 @@
-﻿@model Printing_Photo_Online.user
-@model Printing_Photo_Online.order order
-@model Printing_Photo_Online.category category
+﻿@using Printing_Photo_Online;
+
 @{
     ViewBag.Title = "Profile";
     Layout = "~/Views/Shared/Frontend_Layout.cshtml";
@@ -14,6 +13,7 @@
         <h1>@Session["name"]</h1>
     </div>
 
+
     <div class="d-flex vw-100">
         <div style="margin-top: 5vw; width: 28vw; box-shadow: -3px -3px 10px 5px grey;">
             <div class="container">
@@ -21,50 +21,192 @@
 
 
                 <table class="ms-5 mt-5 mb-3">
-                    <tr class="mb-3">
-                        <td>First Name :</td>
-                        <td><span style="visibility:hidden">000</span>@Model.First_Name</td>
-                    </tr>
+                    @foreach (user myuser in ViewBag.USERS)
+                    { 
+                        <tr class="mb-3">
+                            <td>First Name :</td>
+                            <td><span style="visibility:hidden">000</span>@myuser.First_Name</td>
+                        </tr>
 
-                    <tr class="mb-3">
-                        <td>Last Name :</td>
-                        <td><span style="visibility:hidden">000</span>@Model.Last_Name</td>
-                    </tr>
+                        <tr class="mb-3">
+                            <td>Last Name :</td>
+                            <td><span style="visibility:hidden">000</span>@myuser.Last_Name</td>
+                        </tr>
 
-                    <tr class="mb-3">
-                        <td>Email :</td>
-                        <td><span style="visibility:hidden">000</span>@Model.Email</td>
-                    </tr>
+                        <tr class="mb-3">
+                            <td>Email :</td>
+                            <td><span style="visibility:hidden">000</span>@myuser.Email</td>
+                        </tr>
 
-                    <tr class="mb-3">
-                        <td>Password :</td>
-                        <td><span style="visibility:hidden">000</span>@Model.Pass</td>
-                    </tr>
+                        <tr class="mb-3">
+                            <td>Date Of Birth :</td>
+                            <td><span style="visibility:hidden">000</span>@myuser.Date_Of_Birth</td>
+                        </tr>
 
-                    <tr class="mb-3">
-                        <td>Date Of Birth :</td>
-                        <td><span style="visibility:hidden">000</span>@Model.Date_Of_Birth</td>
-                    </tr>
+                        <tr class="mb-5 mt-5">
+                            <td>Gender :</td>
+                            <td><span style="visibility:hidden">000</span>@myuser.Gender</td>
+                        </tr>
 
-                    <tr class="mb-5 mt-5">
-                        <td>Gender :</td>
-                        <td><span style="visibility:hidden">000</span>@Model.Gender</td>
-                    </tr>
-
-                    <tr class="mb-5">
-                        <td>Phone :</td>
-                        <td><span style="visibility:hidden">000</span>@Model.Phone</td>
-                    </tr>
+                        <tr class="mb-5">
+                            <td>Phone :</td>
+                            <td><span style="visibility:hidden">000</span>@myuser.Phone</td>
+                        </tr>
+                    }
                 </table>
             </div>
         </div>
 
         <div style="margin-top: 5vw;">
             <div class="container">
-                <h2 class="mt-5">Orders</h2>
-                @model category.Category_Name
+                <!--
+    ==============================================================================================================================================================
+                                                                ORDERS
+    ==============================================================================================================================================================
+    -->
+                <h2 class="mt-5 text-center">All Orders</h2>
+
+                @foreach (Photograph myphoto in ViewBag.PHOTO)
+                {
+
+                    foreach (category mycat in ViewBag.CAT)
+                    {
+
+                        foreach (Price_Info myprice in ViewBag.PRICE)
+                        {
+
+
+                            foreach (order myorder in ViewBag.ORDERS)
+                            {
+                                <div class="row justify-content-around">
+                                    <div class="col-xl-3 col-md-6">
+                                        <div class="card bg-primary text-white mb-4">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Order</h5>
+                                                <p class="card-text">
+                                                    <table>
+                                                        <tr>
+                                                            <th><small>Order Number : </small></th>
+                                                            <td><small> @myorder.Order_Number</small></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th><small>Photograph : </small></th>
+                                                            <td>
+                                                                <small>@myphoto.Photo.Equals(myorder.Photograph_Id == myphoto.id)</small>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th><small>Price : </small></th>
+                                                            <td>
+                                                                <small>@myprice.Sale_Price.Equals(myorder.PriceInfo_Id == myprice.id)</small>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th><small>Quantity : </small></th>
+                                                            <td><small> @myorder.Quantity</small></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th><small>Total : </small></th>
+                                                            <td><small> @myorder.Total_Price</small></td>
+                                                        </tr>
+                                                    </table>
+                                                </p>
+                                            </div>
+                                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+
+                        }
+
+
+                    }
+
+
+
+                    <!--
+        ==============================================================================================================================================================
+                                                                    PHOTOGRAPHS
+        ==============================================================================================================================================================
+        -->
+
+
+                    <h2 class="mt-5 text-center">My Photographs</h2>
+
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="All-tab" data-bs-toggle="tab" data-bs-target="#All" type="button" role="tab" aria-controls="All" aria-selected="true">All</button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="Party-tab" data-bs-toggle="tab" data-bs-target="#Party" type="button" role="tab" aria-controls="Party" aria-selected="false">Party</button>
+                        </li>
+                        
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="Nature-tab" data-bs-toggle="tab" data-bs-target="#Nature" type="button" role="tab" aria-controls="Nature" aria-selected="false">Nature</button>
+                        </li>
+                        
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="Outing-tab" data-bs-toggle="tab" data-bs-target="#Outing" type="button" role="tab" aria-controls="Outing" aria-selected="false">Outing</button>
+                        </li>
+                        
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="Function-tab" data-bs-toggle="tab" data-bs-target="#Function" type="button" role="tab" aria-controls="Function" aria-selected="false">Function</button>
+                        </li>
+                        
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="Festival-tab" data-bs-toggle="tab" data-bs-target="#Festival" type="button" role="tab" aria-controls="Festival" aria-selected="false">Festival</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="All" role="tabpanel" aria-labelledby="home-tab">All</div>
+                        <div class="tab-pane fade" id="Party" role="tabpanel" aria-labelledby="profile-tab">Party</div>
+                        <div class="tab-pane fade" id="Nature" role="tabpanel" aria-labelledby="contact-tab">Nature</div>
+                        <div class="tab-pane fade" id="Outing" role="tabpanel" aria-labelledby="profile-tab">Outing</div>
+                        <div class="tab-pane fade" id="Function" role="tabpanel" aria-labelledby="contact-tab">Function</div>
+                        <div class="tab-pane fade" id="Festival" role="tabpanel" aria-labelledby="contact-tab">Festival</div>
+                    </div>
+
+
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
         </div>
+    
     </div>
 
 </section>
