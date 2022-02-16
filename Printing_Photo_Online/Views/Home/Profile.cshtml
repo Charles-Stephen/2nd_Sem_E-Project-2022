@@ -23,7 +23,7 @@
 
 
                 <table class="ms-5 mt-5 mb-3">
-                    @foreach (user myuser in Model.
+                    @foreach (user myuser in Model.USER)
                     {
                     <tr class="mb-3">
                         <td>First Name :</td>
@@ -68,17 +68,17 @@
                 -->
                 <h2 class="mt-5 text-center">All Orders</h2>
 
-                @foreach (Photograph myphoto in ViewBag.PHOTO)
+                @foreach (Photograph myphoto in Model.PHOTO)
                 {
 
-                    foreach (category mycat in ViewBag.CAT)
+                    foreach (category mycat in Model.CATEGORY)
                     {
 
-                        foreach (Price_Info myprice in ViewBag.PRICE)
+                        foreach (Price_Info myprice in Model.PRICE)
                         {
 
 
-                            foreach (order myorder in ViewBag.ORDERS)
+                            foreach (order myorder in Model.ORDER)
                             {
                                 <div class="row justify-content-around">
                                     <div class="col-xl-3 col-md-6">

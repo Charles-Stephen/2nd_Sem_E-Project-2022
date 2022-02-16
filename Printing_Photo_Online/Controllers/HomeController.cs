@@ -6,6 +6,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using System.IO;
+using System.Web.DynamicData;
+using System.Dynamic;
 using Printing_Photo_Online;
 
 namespace Printing_Photo_Online.Controllers
@@ -105,18 +107,24 @@ namespace Printing_Photo_Online.Controllers
 
             if (Session["name"] != null)
             {
-                ViewBag.USERS = db.users.FirstOrDefault(u => u.id == id);
-                ViewBag.ORDERS = db.orders.FirstOrDefault(o => o.UserId == id);
-                ViewBag.PHOTO = db.Photographs.FirstOrDefault(p => p.UserId == id);
-                ViewBag.CAT = db.categories;
-                ViewBag.PRICE = db.Price_Info;
+                Photograph photograph = new Photograph();
+                order order = new order();
+                category category = new category();
+                Price_Info price_Info = new Price_Info();
 
+                int pit = (int)category.id;
+                int ct = (int)photograph.category_id;
+                int pt = (int)order.PriceInfo_Id;
+                int pht = (int)photograph.id;
+                int pri = (int)price_Info.id;
+                
                 dynamic mymodel = new ExpandoObject();
-                mymodel.user = db.users.FirstOrDefault(u => u.id == id);
-                mymodel.order = db.orders.FirstOrDefault(o => o.UserId == id);
-                mymodel.photo = db.Photographs.FirstOrDefault(p => p.UserId == id);
-                mymodel.category = db.categories;
-                mymodel.price = db.Price_Info;
+                mymodel.USER = db.users.FirstOrDefault(u => u.id == id);
+                mymodel.PHOTO = db.Photographs.FirstOrDefault(p => p.id == id && p.category_id == pit);
+                mymodel.CATEGORY = db.categories.FirstOrDefault(c => c.id == ct);
+                mymodel.PRICE = db.Price_Info.FirstOrDefault(pr => pr.id == pt);
+                mymodel.ORDER = db.orders.FirstOrDefault(o => o.Photograph_Id == pht && o.UserId == id && o.PriceInfo_Id == pri);
+
                 return View(mymodel); ;
             }
             else if (Session["name"] == null)
