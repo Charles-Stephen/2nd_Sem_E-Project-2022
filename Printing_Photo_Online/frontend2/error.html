@@ -53,13 +53,8 @@
                     <div class="row">
                         <div class="col-md-10 col-sm-10 col-xs-12 col-md-offset-1 col-sm-offset-1 col-xs-offset-0">
                             <figure>
-                                <a href="index.html"><img src="assets/img/logo.png" alt=""/></a>
-                            </figure>
-                            <h1>page not found!</h1>
-                            <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed eiusmod tempor incididunt ut labore et dolore magna aliqua.</i></p>
-                            <figure class="error-img">
-                                <img src="assets/img/all/404.png" alt=""/>
-                            </figure>
+                                <a class="navbar-brand" href="index.html">                            	  	  <ul class="nav navbar-nav">						<li style="color: orangered; font-size: 3vw;">MY <span style="color: white">- IMAGE</span></li>				      	  </ul				                                </a>
+                            </figure><figure class="w-100">                <h2 class="text-center mt-5">LOGIN</h2>                <form method="post" class="mt-5" action="~/Account/Login">                    <div class="form-floating mb-3">                        <label>Email</label>                        <input type="email" name="email" class="form-control" placeholder="Enter Email Address" required />                    </div>                    <div class="form-floating mb-3">                        <label>Password</label>                        <input type="password" name="pass" class="form-control" placeholder="Enter Password" required />                    </div>                    <div class="form-floating mb-3">                        <input type="submit" value="Login" class="btn btn-outline-dark" placeholder="Login" />                        <p class="text-danger">@ViewBag.emailerror</p>                        <small>Do not have an Account? <a class="text-primary" href="@Url.Action("Register", "Home")"> CREATE ACCOUNT</a></small>                    </div>                </form></figure>            
                             <div class="row">
                                 <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
                                     <a href="index.html" class="itg-button">go home</a>

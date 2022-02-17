@@ -112,20 +112,16 @@ namespace Printing_Photo_Online.Controllers
                 category category = new category();
                 Price_Info price_Info = new Price_Info();
 
-                int pit = (int)category.id;
-                int ct = (int)photograph.category_id;
-                int pt = (int)order.PriceInfo_Id;
-                int pht = (int)photograph.id;
-                int pri = (int)price_Info.id;
+
                 
                 dynamic mymodel = new ExpandoObject();
                 mymodel.USER = db.users.FirstOrDefault(u => u.id == id);
-                mymodel.PHOTO = db.Photographs.FirstOrDefault(p => p.id == id && p.category_id == pit);
-                mymodel.CATEGORY = db.categories.FirstOrDefault(c => c.id == ct);
-                mymodel.PRICE = db.Price_Info.FirstOrDefault(pr => pr.id == pt);
-                mymodel.ORDER = db.orders.FirstOrDefault(o => o.Photograph_Id == pht && o.UserId == id && o.PriceInfo_Id == pri);
+                mymodel.PHOTO = db.Photographs.Where(p => p.id == id && p.category_id == category.id);
+                mymodel.CATEGORY = db.categories.Where(c => c.id == photograph.category_id);
+                mymodel.ORDER = db.orders.Where(o => o.Photograph_Id == photograph.id && o.UserId == id && o.PriceInfo_Id == price_Info.id);
 
-                return View(mymodel); ;
+                return View(mymodel);
+                
             }
             else if (Session["name"] == null)
             {
