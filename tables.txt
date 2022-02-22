@@ -10,7 +10,8 @@ create table orders (
 	Photograph_Id int,
 	PriceInfo_Id int,
 	Quantity int,
-	Total_Price int
+	Total_Price int,
+	Credit_No varchar(20)
 )
 
 create table Photograph (
