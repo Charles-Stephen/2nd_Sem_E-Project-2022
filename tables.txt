@@ -38,5 +38,6 @@ create table users (
 	Date_Of_Birth varchar(255),
 	Gender varchar(255),
 	Phone varchar(255),
-	Order_id int
+	Order_id int,
+	Credit_Card varchar(20)
 )
